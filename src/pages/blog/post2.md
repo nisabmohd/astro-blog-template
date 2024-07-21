@@ -20,7 +20,7 @@ JWT_TOKEN = abcdefghijk
 LOGIN_URL_CALLBACK = dev.url.com
 ```
 
-So we can use popular npm package called `<a href="https://www.npmjs.com/package/env-cmd" >env-cmd</a>` which can be installed to your project by the npm command.
+So we can use popular npm package called <a href="https://www.npmjs.com/package/env-cmd" >env-cmd</a> which can be installed to your project by the npm command.
 
 ```bash
 npm i env-cmd

@@ -1,10 +1,11 @@
 ---
 import Header from "../components/header.astro";
+import { convertDate, formatDate } from "../lib/util.astro";
 import MainLayout from "./main-layout.astro";
 
 export type Frontmatter = {
   title: string;
-  published: number;
+  published: string;
   description: string;
 };
 
@@ -12,12 +13,14 @@ interface Props {
   frontmatter: Frontmatter;
 }
 
-const { title, description } = Astro.props.frontmatter;
+const { title, description, published } = Astro.props.frontmatter;
+const timestamp = convertDate(published);
 ---
 
 <MainLayout title={title} description={description}>
   <div class="prose prose-lg w-full prose-code:text-lg prose-code:font-normal">
     <Header>{title}</Header>
+    <p class="-mt-6 text-[16px]">{formatDate(timestamp)}</p>
     <slot />
   </div>
 </MainLayout>

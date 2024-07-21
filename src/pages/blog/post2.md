@@ -2,7 +2,7 @@
 layout: "../../layouts/blog-layout.astro"
 title: Run Node with specific env file
 description: In this blog, we'll explore using specific environment files like .env.trail or .env.test in our applications, along with scripting for management.
-published: 1697564476495
+published: 17-10-2023
 ---
 
 In this blog we will discuss how we use a specific env file such as `.env.trail` , `.env.test` , `.env.prod` etc to use in our apllication.

@@ -2,7 +2,7 @@
 layout: "../../layouts/blog-layout.astro"
 title: Implement fetching & caching mechanism in React
 description: React custom hooks encapsulate reusable logic, enhancing code quality and scalability.
-published: 1696144310432
+published: 01-10-2023
 ---
 
 To fetch data from an API and display a response in a React application, you need to create a component that handles the API request. Inside the component, you can use the useState hook to initialize a state variable to hold the fetched data. Then, use the useEffect hook to fetch the data when the component mounts. Inside the useEffect hook, make an HTTP request to the API using methods like fetch or a library like Axios. Once you receive the response, update the state variable with the fetched data. Finally, render the response in the component's JSX, accessing the relevant data from the state.

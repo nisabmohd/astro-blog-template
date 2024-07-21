@@ -11,4 +11,9 @@ export function formatDate(date: Date): string {
 
   return `${abbreviatedMonth} ${day} ${year}`;
 }
+
+export function convertDate(str: string) {
+  const [day, month, year] = str.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
 ---

@@ -1,0 +1,19 @@
+---
+import { type Frontmatter } from "../layouts/blog-layout.astro";
+import { formatDate } from "../lib/util.astro";
+
+export type BlogType = Frontmatter & {
+  url: string;
+};
+
+interface Props extends BlogType {}
+
+const { title, published, url } = Astro.props;
+---
+
+<a class="flex flex-col gap-[0.13rem]" href={url}>
+  <span class="text-lg">{title}</span>
+  <span class="text-neutral-500">
+    {formatDate(new Date(published))}
+  </span>
+</a>

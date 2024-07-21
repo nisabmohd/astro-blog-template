@@ -1,0 +1,23 @@
+---
+import Header from "../components/header.astro";
+import MainLayout from "./main-layout.astro";
+
+export type Frontmatter = {
+  title: string;
+  published: number;
+  description: string;
+};
+
+interface Props {
+  frontmatter: Frontmatter;
+}
+
+const { title, description } = Astro.props.frontmatter;
+---
+
+<MainLayout title={title} description={description}>
+  <div class="prose prose-lg w-full prose-code:text-lg prose-code:font-normal">
+    <Header>{title}</Header>
+    <slot />
+  </div>
+</MainLayout>

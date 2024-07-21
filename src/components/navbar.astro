@@ -1,0 +1,22 @@
+---
+const LINKS = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Blogs",
+    href: "/blog",
+  },
+];
+---
+
+<nav class="h-20 flex items-center gap-5 font-medium">
+  {
+    LINKS.map((item) => (
+      <a class="underline underline-offset-2" href={item.href}>
+        {item.title}
+      </a>
+    ))
+  }
+</nav>

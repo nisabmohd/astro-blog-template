@@ -1,0 +1,29 @@
+---
+const SOCIAL_LINKS = [
+  {
+    title: "GitHub",
+    href: "https://github.com/nisabmohd",
+  },
+  {
+    title: "Twitter",
+    href: "https://twitter.com/MohdNisab",
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/mohd-nisab-725148197/",
+  },
+];
+---
+
+<footer class="flex flex-col gap-4 py-5">
+  <div class="flex items-center gap-4">
+    {
+      SOCIAL_LINKS.map((it) => (
+        <a class="underline underline-offset-2" href={it.href} target="_blank">
+          {it.title}
+        </a>
+      ))
+    }
+  </div>
+  <p class="text-[15px]">© {new Date().getFullYear()} MIT Licensed</p>
+</footer>

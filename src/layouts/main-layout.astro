@@ -1,0 +1,34 @@
+---
+import "../styles/globals.css";
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <main class="container">
+      <Navbar />
+      <section class="py-6">
+        <slot />
+      </section>
+      <Footer />
+    </main>
+  </body>
+</html>
